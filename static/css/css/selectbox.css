@@ -1,0 +1,113 @@
+.select-container {
+  background: #F0EBE3;
+  border-radius: 999px;
+  padding: 12px 32px 12px 16px;
+  font-family: "BIZ UDPGothic";
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.42px;
+  cursor: pointer;
+  opacity: 1.0;
+  width: fit-content;
+  min-width: 70px;
+  position: relative;
+  top: 0px;
+  overflow: hidden;
+  text-align: center;
+  justify-content: center;
+  height: 48px;
+}
+
+.select-label {
+  width: 182px;
+  height: 38px;
+  position: relative;
+  left: 0;
+  top: 0;
+  color: black;
+  font-size: 16px;
+  font-family: BIZ UDPGothic;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.48px;
+  word-wrap: break-word;
+}
+
+.text-YMD {
+  font-family: "BIZ UDPGothic";
+  font-size: 18px;
+  line-height: 14px;
+  letter-spacing: 0.42px;
+  width: fit-content;
+  min-width: 40px;
+  position: relative;
+  top: 0px;
+  align-items: center;      /* 縦方向中央 */
+  justify-content: center;
+  display: flex;
+}
+
+.custom-select{
+  display: inline-block;
+  max-width: 100%;
+  text-align: center;
+  justify-content: center;
+  top: 4px;
+  position: relative;
+}
+
+.select-container::after {
+  content: "⏷";
+  font-size: 14px;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+
+.select-container::after {
+  content: "⏷";
+  font-size: 14px;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.select-options {
+  display: none;
+  position: absolute;
+  top: 22px;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 1; /* 背面 */
+  width: 100%;
+  white-space: nowrap;
+}
+
+.select-container.open + .select-options {
+  display: block;
+}
+
+.empty-margin {
+  height: 25px;
+  pointer-events: none;
+  user-select: none;
+  background-color: transparent;
+}
+
+.select-option {
+  padding: 12px 16px;
+  cursor: pointer;
+}
+
+.select-option:hover {
+  background-color: #F0EBE3;
+}

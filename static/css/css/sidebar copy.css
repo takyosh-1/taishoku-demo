@@ -1,0 +1,81 @@
+.side-menu-container {
+  width: 210px;
+  position: fixed;
+  top: 2%;
+  height: 90%;
+  z-index: 0;
+  display: inline-block;
+}
+
+.menu-background {
+  height: 100%;
+  width: 190px;
+  background: #F0EBE3;
+  position: absolute;
+  top: 52px;
+  left: 0;
+  z-index: -1;
+  border-radius: 0px 30px 30px 0px;
+}
+.menu {
+  position: absolute;
+  top: 104px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  overflow: visible;
+}
+.menu-item {
+  padding: 8px 12px;
+  border-top-right-radius: 999px;
+  border-bottom-right-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 180px;
+  max-width: none;
+  cursor: pointer;
+  background:#D6E0FF;
+  color: black;
+  text-decoration: none;
+}
+.menu-item:hover {
+  background: #001964;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.hovered {
+  background: #465285;
+  color: #FFFFFF;
+}
+.icon-container {
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.icon {
+  width: 24px;
+  height: 24px;
+  background: white;
+}
+.text {
+  flex: 1;
+  height: auto;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-family: "BIZ UDPGothic";
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0.48px;
+  white-space: nowrap;
+}
+.side-menu-container.closed .menu-item {
+  width: 64px !important;
+}
+/* close 状態の場合は .text を非表示 */
+.side-menu-container.closed .text {
+  display: none !important;
+}

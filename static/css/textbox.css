@@ -1,0 +1,214 @@
+.container {
+    width: 450px;
+    height: 100px;
+    position: relative;
+}
+
+.big-container {
+    width: 830px;
+    height: 100px;
+    position: relative;
+}
+
+.input-wrapper {
+    width: 410px;
+    height: 48px;
+    position: absolute;
+    left: 0;
+    top: 30px;
+    background: white;
+    border-radius: 999px;
+    border: 1px solid #9E9E9E;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.big-input-wrapper {
+    width: 852px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    top: 30px;
+    background: white;
+    border-radius: 14px;
+    border: 2.5px solid #9E9E9E; /* 枠線を太く */
+    display: flex;
+    padding: 0 15px;
+}
+
+/* エラー時の枠線を赤くする */
+.input-wrapper.error {
+    border-color: #FF3B30;
+    border-width: 3px;
+}
+
+.mini-textbox {
+    width: 75px;
+    height: 48px;
+    position: relative;
+    left: 5px;
+    top: 0px;
+    background: white;
+    border-radius: 999px;
+    border: 1px solid #9E9E9E;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.mini-text-input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-family: BIZ UDPGothic;
+    color: black;
+    background: transparent;
+    line-height: 28px;
+    letter-spacing: 0.48px;
+    word-wrap: break-word;
+    height: 48px;
+    position: relative;
+    top: 0px;
+    width: 45px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-family: BIZ UDPGothic;
+    color: black;
+    background: transparent;
+    line-height: 28px;
+    letter-spacing: 0.48px;
+    word-wrap: break-word;
+    height: 28px;
+}
+
+.big-text-input {
+    flex-grow: 1;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-family: BIZ UDPGothic;
+    color: red;
+    background: transparent;
+    line-height: 28px;
+    letter-spacing: 0.48px;
+    height: 28px;
+    top: 10px;   
+    position: absolute;
+}
+
+.icon-clear {
+    cursor: pointer; 
+    visibility: hidden; 
+}
+
+.icon-error {
+    position: relative;
+    cursor: pointer; 
+    visibility: visible; 
+}
+
+.icon-error-wrapper {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.icon-error-wrapper::after {
+    content: "AI-OCR機能により、提出書類と入力内容の差分を検知しました。\内容を確認し、必要に応じて修正してください。";
+    white-space: pre-line; /* ← 改行コード（\n）を解釈してくれる */
+    position: absolute;
+    left: 120%;
+    top: 50%;
+    width: 356px;
+    height: auto;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    z-index: 10000;
+}
+
+.icon-error-wrapper:hover::after {
+    opacity: 1;
+}
+
+.label {
+    width: 182px;
+    height: 18px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: black;
+    font-size: 16px;
+    font-family: BIZ UDPGothic;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.48px;
+    word-wrap: break-word;
+}
+
+.description {
+    width: 410px;
+    height: 18px;
+    position: absolute;
+    left: 0;
+    top: 82px;
+    color: #C8BEAA;
+    font-size: 12px;
+    font-family: BIZ UDPGothic;
+    font-weight: 400;
+    line-height: 20.04px;
+    letter-spacing: 0.48px;
+    word-wrap: break-word;
+}
+
+/* 吹き出し本体 */
+.speech-bubble {
+    position: absolute;
+    top: 50%;
+    left: 120%;
+    transform: translateY(-50%);
+    background: #333;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 16px;
+    font-size: 13px;
+    white-space: nowrap;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s;
+    z-index: 10;
+  }
+  
+  /* 吹き出しの“しっぽ” */
+  .speech-bubble::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -8px;
+    transform: translateY(-50%);
+    border: 8px solid transparent;
+    border-right-color: #333;
+  }
+  
+/* ホバーで表示 */
+.icon-error:hover .speech-bubble {
+    opacity: 1;
+    visibility: visible;
+}

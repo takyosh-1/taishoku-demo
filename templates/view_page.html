@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+
+{% block title %}住民票記載事項証明書・住民票{% endblock %}
+
+{% block extra_style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/button.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/textbox.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/selectbox.css') }}" />
+{% endblock %}
+
+{% block content %}
+  <!-- 上部情報 -->
+    <div class="content-title" style="font-weight: normal;">
+        履歴 ＞ 退職者情報詳細
+    </div>
+    <div class="status-container">
+        <div class="status-label">ステータス</div>
+        <div class="status-value">承認済</div>
+    </div>
+    <div class="content-container">
+        <div class="content-column">
+            <div class="name-title">
+                基本情報
+            </div>
+            <div class="field-container">
+                <div class="field-label">氏名</div>
+                <div class="field-value">山田　太郎</div>
+            </div>
+            <div class="field-container">
+                <div class="field-label">フリガナ</div>
+                <div class="field-value">ヤマダ　タロウ</div>
+            </div>
+            <div class="field-container">
+                <div class="field-label">生年月日</div>
+                <div class="field-value">1980/10/10</div>
+            </div>
+            <div class="field-container">
+                <div class="field-label">社員番号</div>
+                <div class="field-value">JP0000000</div>
+            </div>
+            <div class="field-container">
+                <div class="field-label">所属部署</div>
+                <div class="field-value">第一営業部</div>
+            </div>
+            <div class="field-container">
+                <div class="field-label">雇用形態</div>
+                <div class="field-value">正社員</div>
+            </div>
+        </div>
+        <div class="content-column">
+            <div class="name-title">
+                連絡・住所情報
+            </div>
+            <div class="field-container">
+                <div class="field-label">住所（都道府県）</div>
+                <div class="field-value">東京都</div>
+            </div>
+            <div class="field-container">
+                <div class="field-label">住所（市区町村）</div>
+                <div class="field-value">中央区</div>
+            </div>
+            <div class="field-container">
+                <div class="field-label">住所（番地以下）</div>
+                <div class="field-value">八重洲2-2-3　ドミトリートーキョー505</div>
+            </div>
+            <div class="schedule-section">
+                <div class="name-title schedule-title">スケジュール</div>
+                <div class="field-container">
+                    <div class="field-label">退職年月日</div>
+                    <div class="field-value">2025/10/30</div>
+                </div>
+                <div class="field-container">
+                    <div class="field-label">業務最終日</div>
+                    <div class="field-value">2025/10/1</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="button-group" style="left: 20px;">
+        <button class="button-secondly" style="width: 150px;">
+            <div class="label">＜ 退職者一覧</div>
+        </button>
+    </div>
+
+<!-- <a class="button-group" href="/new_employee_aplication_status/updated">
+    <button class="button" style="width: 150px;">
+        <div class="label">確認・保存</div>
+    </button>
+</a> -->
+<!-- <div style="display: flex;"> -->
+    <!-- <div style="width: 50%;"> -->
+        <!-- <div class="container" data-プロパティ1="enabled">
+            <div class="label">基礎年金番号</div>
+            <div class="input-wrapper">
+                <input type="text" class="text-input" value="入力してください。" oninput="toggleClearButton(this)">
+                <img class="icon-clear" src="/static/image/help.svg" style="visibility: hidden;">
+            </div>
+            <div class="description">入力項目に関するテキストがここに入ります。</div>
+        </div> -->
+    <!-- </div> -->
+    <!-- <div style="width: 50%;">
+        <div class="container" data-プロパティ1="enabled">
+            <div class="label">基礎年金番号</div>
+            <div class="input-wrapper">
+                <input type="text" class="text-input" value="入力してください。" oninput="toggleClearButton(this)">
+                <img class="icon-clear" src="/static/image/help.svg" style="visibility: hidden;">
+            </div>
+            <div class="description">入力項目に関するテキストがここに入ります。</div>
+        </div>
+    </div> -->
+<!-- </div> -->
+
+{% endblock %}
