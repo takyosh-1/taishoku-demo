@@ -104,7 +104,9 @@ html, body {
   line-height: 1; /* 行の高さを1に設定して上揃えを実現 */
   color: #000000;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #E0E0E0;
 }
 
 .name-title.bottom {
