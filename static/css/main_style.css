@@ -121,3 +121,59 @@ html, body {
   line-height: 1; /* 行の高さを1に設定して上揃えを実現 */
   color: #000000;
 }
+
+/* View page specific styles */
+.status-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.status-label {
+  font-family: 'BIZ UDPGothic';
+  font-size: 16px;
+  font-weight: 700;
+  margin-right: 15px;
+}
+
+.status-value {
+  font-family: 'BIZ UDPGothic';
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.content-container {
+  display: flex;
+  gap: 60px;
+  margin-top: 15px;
+}
+
+.content-column {
+  flex: 1;
+}
+
+.field-container {
+  margin-bottom: 25px;
+}
+
+.field-label {
+  font-family: 'BIZ UDPGothic';
+  font-size: 12px;
+  color: #999999;
+  margin-bottom: 6px;
+}
+
+.field-value {
+  font-family: 'BIZ UDPGothic';
+  font-size: 16px;
+  color: #000000;
+}
+
+.schedule-section {
+  margin-top: 40px;
+}
+
+.schedule-title {
+  margin-top: 0;
+}
