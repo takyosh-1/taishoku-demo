@@ -1,0 +1,169 @@
+{% extends "layout.html" %}
+
+{% block title %}住民票記載事項証明書・住民票{% endblock %}
+
+{% block extra_style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/button.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/textbox.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/selectbox.css') }}" />
+{% endblock %}
+
+{% block content %}
+  <!-- 上部情報 -->
+    <div class="content-title" style="font-weight: normal;">
+        退職者一覧 ＞ <strong>退職者情報詳細</strong>
+    </div>
+    <div style="display: flex; top: 15px; position: relative;">
+        <div>
+            <div class="name-title">
+                基本情報
+            </div>
+            <div class="container" data-プロパティ1="enabled">
+                <div class="label">氏名</div>
+                <div class="input-wrapper">
+                    <input type="text" id="input2" class="text-input"  value="山田　太郎" oninput="toggleClearButton(this)">
+                    <img class="icon-clear" src="/static/image/help.svg" style="visibility: hidden;">
+                </div>
+                <div class="description"></div>
+            </div>
+            <div class="container" data-プロパティ1="enabled">
+                <div class="label">フリガナ</div>
+                <div class="input-wrapper">
+                    <input type="text" id="input2" class="text-input"  value="ヤマダ　タロウ" oninput="toggleClearButton(this)">
+                    <img class="icon-clear" src="/static/image/help.svg" style="visibility: hidden;">
+                </div>
+                <div class="description"></div>
+            </div>
+            <div class="container" data-プロパティ1="enabled">
+                <div class="label">生年月日</div>
+                <div class="input-wrapper">
+                    <input type="text" id="input1" class="text-input"  value="1980/10/10" oninput="toggleClearButton(this)">
+                    <img class="icon-clear" src="/static/images/help.svg" style="visibility: hidden;">
+                </div>
+                <div class="description"></div>
+            </div>
+            <div class="container" data-プロパティ1="enabled">
+                <div class="label">社員番号</div>
+                <div class="input-wrapper">
+                    <input type="text" id="input1" class="text-input"  value="JP0000000" oninput="toggleClearButton(this)">
+                </div>
+                <div class="description"></div>
+            </div>
+            <div class="container" data-プロパティ1="enabled">
+                <div class="label">所属部署</div>
+                <div class="input-wrapper">
+                    <input type="text" id="input1" class="text-input"  value="第一営業部" oninput="toggleClearButton(this)">
+                    <img class="icon-clear" src="/static/images/help.svg" style="visibility: hidden;">
+                </div>
+                <div class="description"></div>
+            </div>
+            <div class="container" data-プロパティ1="enabled">
+                <div class="label">雇用形態</div>
+                <div class="input-wrapper">
+                    <input type="text" id="input1" class="text-input"  value="正社員" oninput="toggleClearButton(this)">
+                    <img class="icon-clear" src="/static/images/help.svg" style="visibility: hidden;">
+                </div>
+                <div class="description"></div>
+            </div>
+        </div>
+        <div>
+            <div class="name-title">
+                連絡・住所情報
+            </div>
+            <div class="container" data-プロパティ1="enabled">
+                <div class="label">住所（都道府県）</div>
+                <div class="input-wrapper">
+                    <input type="text" id="input2" class="text-input"  value="東京都" oninput="toggleClearButton(this)">
+                    <img class="icon-clear" src="/static/image/help.svg" style="visibility: hidden;">
+                </div>
+                <div class="description"></div>
+            </div>
+            <div class="container" data-プロパティ1="enabled">
+                <div class="label">住所（市区町村）</div>
+                <div class="input-wrapper">
+                    <input type="text" id="input2" class="text-input"  value="中央区" oninput="toggleClearButton(this)">
+                    <img class="icon-clear" src="/static/image/help.svg" style="visibility: hidden;">
+                </div>
+                <div class="description"></div>
+            </div>
+            <div class="container" data-プロパティ1="enabled">
+                <div class="label">住所（番地以下）</div>
+                <div class="input-wrapper">
+                    <input type="text" id="input1" class="text-input"  value="2-2-3　ドミトリートーキョー505" oninput="toggleClearButton(this)">
+                    <img class="icon-clear" src="/static/images/help.svg" style="visibility: hidden;">
+                </div>
+                <div class="description"></div>
+            </div>
+            <div class="container" data-プロパティ1="enabled">
+                <div class="name-title bottom">スケジュール</div>
+            </div>
+            <div class="container" data-プロパティ1="enabled">
+                <div class="label">退職年月日</div>
+                <div class="input-wrapper">
+                    <input type="text" id="input1" class="text-input"  value="2025/10/30" oninput="toggleClearButton(this)">
+                    <img class="icon-clear" src="/static/images/help.svg" style="visibility: hidden;">
+                </div>
+                <div class="description"></div>
+            </div>
+            <div class="container" data-プロパティ1="enabled">
+                <div class="label">業務最終日</div>
+                <div class="input-wrapper">
+                    <input type="text" id="input1" class="text-input"  value="2025/10/1" oninput="toggleClearButton(this)">
+                    <img class="icon-clear" src="/static/images/help.svg" style="visibility: hidden;">
+                </div>
+                <div class="description"></div>
+            </div>
+        </div>
+    </div>
+    <div class="big-container" data-プロパティ1="enabled">
+        <div class="name-title">チェック結果</div>
+        <div class="big-input-wrapper">
+            <input type="text" id="input1" class="big-text-input"  value="・住所（市区町村）に誤りがある可能性があります。" oninput="toggleClearButton(this)">
+        </div>
+    </div>
+    <div class="button-group" style="left: 20px;">
+        <button class="button-secondly" style="width: 150px;">
+            <div class="label">＜ 退職者一覧</div>
+        </button>
+    </div>
+
+    <div class="button-group">
+        <button class="button-secondly">
+            <div class="label">差戻</div>
+        </button>
+        <a href="/view_page">
+            <button class="button">
+            <div class="label">承認</div>
+            </button>
+        </a>
+    </div>
+
+<!-- <a class="button-group" href="/new_employee_aplication_status/updated">
+    <button class="button" style="width: 150px;">
+        <div class="label">確認・保存</div>
+    </button>
+</a> -->
+<!-- <div style="display: flex;"> -->
+    <!-- <div style="width: 50%;"> -->
+        <!-- <div class="container" data-プロパティ1="enabled">
+            <div class="label">基礎年金番号</div>
+            <div class="input-wrapper">
+                <input type="text" class="text-input" value="入力してください。" oninput="toggleClearButton(this)">
+                <img class="icon-clear" src="/static/image/help.svg" style="visibility: hidden;">
+            </div>
+            <div class="description">入力項目に関するテキストがここに入ります。</div>
+        </div> -->
+    <!-- </div> -->
+    <!-- <div style="width: 50%;">
+        <div class="container" data-プロパティ1="enabled">
+            <div class="label">基礎年金番号</div>
+            <div class="input-wrapper">
+                <input type="text" class="text-input" value="入力してください。" oninput="toggleClearButton(this)">
+                <img class="icon-clear" src="/static/image/help.svg" style="visibility: hidden;">
+            </div>
+            <div class="description">入力項目に関するテキストがここに入ります。</div>
+        </div>
+    </div> -->
+<!-- </div> -->
+
+{% endblock %}
